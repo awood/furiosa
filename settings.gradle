@@ -1,0 +1,3 @@
+
+rootProject.name = 'furiosa'
+include 'core', 'cli', 'web'
