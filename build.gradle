@@ -51,19 +51,22 @@ project(':core') {
     }
 }
 
-project(':cli') {
+project(':tui') {
+    apply plugin: "org.springframework.boot"
     dependencies {
         compile project(':core')
         compile "org.springframework.boot:spring-boot-starter:$spring_boot_version"
-        compile "org.springframework.shell:spring-shell-starter:2.0.1.RELEASE"
+        compile "com.googlecode.lanterna:lanterna:3.0.1"
     }
 
     bootJar {
-        mainClassName = 'cc.untar.furiosa.cli.CliApplication'
+        mainClassName = 'cc.untar.furiosa.tui.TuiApplication'
     }
 }
 
 project(':web') {
+    apply plugin: "org.springframework.boot"
+
     dependencies {
         compile project(':core')
         compile "org.springframework.boot:spring-boot-starter:$spring_boot_version"

@@ -15,16 +15,16 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package cc.untar.furiosa.cli;
+package cc.untar.furiosa.tui;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @SuppressWarnings("checkstyle:hideutilityclassconstructor")
-public class CliApplication {
+public class TuiApplication {
     public static void main(String[] args) {
-        SpringApplication.run(CliApplication.class, args);
+        SpringApplication.run(TuiApplication.class, args);
     }
 }
 

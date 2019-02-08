@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <contextName>furiosa-web-test</contextName>
-    <appender name="RootAppender" class="ch.qos.logback.core.ConsoleAppender">
+<contextName>furiosa-tui</contextName>
+    <appender name="RootAppender" class="ch.qos.logback.core.FileAppender">
+        <file>furiosa-tui.log</file>
         <encoder>
             <pattern>%d{ISO8601} [%t] %-5p %logger{0}[%L] - %m%n</pattern>
         </encoder>
     </appender>
+
     <logger name="cc.untar.furiosa" level="INFO"/>
 
     <root level="WARN">
-        <appender-ref ref="RootAppender"/>
+        <appender-ref ref="RootAppender" />
     </root>
 </configuration>
-

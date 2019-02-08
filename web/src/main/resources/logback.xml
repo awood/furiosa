@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <contextName>furiosa</contextName>
+    <contextName>furiosa-web</contextName>
     <appender name="ConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <pattern>%d{ISO8601} [thread=%thread] %-5p %c - %m%n</pattern>
         </encoder>
     </appender>
-
 
     <logger name="cc.untar.furiosa" level="INFO"/>
 
