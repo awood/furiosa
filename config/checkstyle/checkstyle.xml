@@ -63,7 +63,7 @@
      ##########################################################################
    -->
   <module name="RegexpHeader">
-    <property name="header" value="^/\*\*$\n^ \* Copyright \(c\) 20\d\d.*$"/>
+    <property name="header" value="^/\*$\n^ \* Copyright \(c\) 20\d\d.*$"/>
   </module>
   <module name="Header">
     <property name="headerFile" value="config/checkstyle/HEADER.txt" />
