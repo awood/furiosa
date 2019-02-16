@@ -30,8 +30,8 @@ allprojects {
 }
 subprojects {
     dependencies {
-        testCompile 'org.mockito:mockito-core:$mockito_version'
-        testCompile 'org.mockito:mockito-junit-jupiter:$mockito_version'
+        testCompile "org.mockito:mockito-core:$mockito_version"
+        testCompile "org.mockito:mockito-junit-jupiter:$mockito_version"
         testCompile "org.junit.jupiter:junit-jupiter-api:$junit_version"
         testRuntime "org.junit.jupiter:junit-jupiter-engine:$junit_version"
     }
@@ -42,10 +42,10 @@ project(':core') {
         compile "org.slf4j:slf4j-api:1.7.25"
         compile "org.springframework:spring-beans:$spring_version"
         compile "org.springframework:spring-context:$spring_version"
+        compile "org.hibernate.validator:hibernate-validator:6.0.14.Final"
+        compile "javax.el:javax.el-api:3.0.0"
 
-        // Runtime deps that will be included in the result package but not on the compile classpath.  I.e.
-        // implementations of APIs we are using.
-        runtime "org.hibernate.validator:hibernate-validator:6.0.14.Final"
+        runtime "org.glassfish:javax.el:3.0.1-b11"
 
         testCompile "org.springframework:spring-test:$spring_version"
     }
@@ -60,7 +60,7 @@ project(':tui') {
     }
 
     bootJar {
-        mainClassName = 'cc.untar.furiosa.tui.TuiApplication'
+        mainClassName = "cc.untar.furiosa.tui.TuiApplication"
     }
 }
 
@@ -74,6 +74,6 @@ project(':web') {
     }
 
     bootJar {
-        mainClassName = 'cc.untar.furiosa.web.WebApplication'
+        mainClassName = "cc.untar.furiosa.web.WebApplication"
     }
 }
